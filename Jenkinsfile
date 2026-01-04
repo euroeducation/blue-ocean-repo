@@ -1,10 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('hello'){
-      steps{
-        echo "Hello World"
+    stage('hello') {
+      steps {
+        echo 'Hello World'
+        archiveArtifacts 'target/hello-world-*.jar'
       }
     }
+
   }
 }
